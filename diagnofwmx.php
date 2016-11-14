@@ -26,7 +26,7 @@ foreach ($scenario as $line) {
             exec($cmd,$out);
             $results .= implode("\r\n",$out) . "\r\n";
         } else if ($test[0] == 'ping') {
-            $cmd = "ping ${test[1]}";
+            $cmd = "ping -c 10 ${test[1]}";
             $v = "*** PING test - running command $cmd...\r\n";
             echo($v); $results .= $v;
             exec($cmd,$out);
