@@ -1,1 +1,15 @@
+dns|ipv4only.arpa|A
+dns|ipv4only.arpa|AAAA
 dns|login.wotblitz.com|A
+dns|login.wotblitz.com|AAAA
+dns|login.wotblitz.eu|A
+dns|login.wotblitz.eu|AAAA
+dns|login.wotblitz.ru|A
+dns|login.wotblitz.ru|AAAA
+dns|login.wotblitz.asia|A
+dns|login.wotblitz.asia|AAAA
+tracert|login.wotblitz.com
+tracert|login.wotblitz.eu
+tracert|login.wotblitz.ru
+tracert|login.wotblitz.asia
+

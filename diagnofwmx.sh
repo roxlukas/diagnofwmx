@@ -5,8 +5,6 @@
 
 PHPPKG=php7.0-cli
 ISPHPINST=$(dpkg-query -W -f='${Status}' $PHPPKG 2>/dev/null | grep -c "ok installed")
-TRACRTPKG=traceroute
-ISTRACRTINST=$(dpkg-query -W -f='${Status}' $TRACRTPKG 2>/dev/null | grep -c "ok installed")
 PHPFILE=diagnofwmx.php
 PHPURL=https://raw.githubusercontent.com/roxlukas/diagnofwmx/master/$PHPFILE
 
@@ -15,14 +13,6 @@ if [ "$ISPHPINST" -ne "1" ]; then
     sudo apt -y install $PHPPKG
 else
     echo "*** PHP is already installed"
-fi
-
-if [ "$ISTRACRTINST" -ne "1" ]; then
-    echo "*** Installing Traceroute..."
-    sudo add-apt-repository universe
-    sudo apt -y install $TRACRTPKG
-else
-    echo "*** Traceroute is already installed"
 fi
 
 echo "*** Downloading the diagnostics script from $PHPURL"
