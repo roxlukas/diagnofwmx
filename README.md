@@ -6,7 +6,11 @@ Whole output is saved into a log file, which can be later sent to ISP or game's 
 
 <h3>Usage</h3>
 
-``curl -sS https://raw.githubusercontent.com/roxlukas/diagnofwmx/master/diagnofwmx.sh | /bin/bash``
+``curl -sS https://raw.githubusercontent.com/roxlukas/diagnofwmx/master/diagnofwmx.sh | /bin/bash <game>``
+
+where <game> is one of the following:
+
+  wotb - World of Tanks Blitz
 
 <h3>Donations are welcome</h3>
 

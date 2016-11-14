@@ -9,14 +9,14 @@ PHPFILE=diagnofwmx.php
 PHPURL=https://raw.githubusercontent.com/roxlukas/diagnofwmx/master/$PHPFILE
 
 if [ "$ISPHPINST" -ne "1" ]; then
-    echo "Installing PHP..."
+    echo "*** Installing PHP..."
     sudo apt -y install $PHPPKG
 else
-    echo "PHP is already installed"
+    echo "*** PHP is already installed"
 fi
 
-echo "Downloading the diagnostics script from $PHPURL"
+echo "*** Downloading the diagnostics script from $PHPURL"
 wget $PHPURL
 
-echo "Starting the diagnostic script $PHPFILE"
+echo "*** Starting the diagnostic script $PHPFILE"
 php $PHPFILE $1 $2 $3 $4
