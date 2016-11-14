@@ -16,7 +16,7 @@ else
 fi
 
 echo "*** Downloading the diagnostics script from $PHPURL"
-wget $PHPURL
+wget -q $PHPURL -O $PHPFILE
 
 echo "*** Starting the diagnostic script $PHPFILE"
 php $PHPFILE $1 $2 $3 $4
