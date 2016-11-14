@@ -1,4 +1,5 @@
 <?php
+$version = '0.1';
 $baseurl = "https://raw.githubusercontent.com/roxlukas/diagnofwmx/master";
 
 if ($argc < 1) {
@@ -12,11 +13,12 @@ if (empty($content)) die ("*** Test scenario '" . $argv[1] . "' is empty.\r\n");
 $scenario = preg_split('/\r|\r\n|\n/', $content);
 
 //the whole test result log will be stored here
-$results="*** Report created using diagnofwmx.\r\nCheck https://github.com/roxlukas/diagnofwmx for more information.\r\n";
+$results="*** Report created using diagnofwmx version $version.\r\n    Check https://github.com/roxlukas/diagnofwmx for more information.\r\n";
 
 foreach ($scenario as $line) {
     if (!empty($line)) {
         $test = explode('|', $line);
+        $out=array();
         if ($test[0] == 'dns') {
             $cmd = "dig ${test[1]} ${test[2]}";
             $v = "*** DNS test - running command $cmd...\r\n";
