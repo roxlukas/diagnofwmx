@@ -20,6 +20,12 @@ foreach ($scenario as $line) {
         $test = explode('|', $line);
         $out=array();
         if ($test[0] == 'dns') {
+            $cmd = "dig ${test[1]} ${test[2]}";
+            $v = "*** DNS test - running command $cmd...\r\n";
+            echo($v); $results .= $v;
+            exec($cmd,$out);
+            $results .= implode("\r\n",$out) . "\r\n";
+        } else if ($test[0] == 'dnstrace') {
             $cmd = "dig +trace ${test[1]} ${test[2]}";
             $v = "*** DNS test - running command $cmd...\r\n";
             echo($v); $results .= $v;

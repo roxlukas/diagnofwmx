@@ -1,4 +1,5 @@
 dns|dl-wotblitz-gc.wargaming.net|A
+dnstrace|dl-wotblitz-gc.wargaming.net|A
 curl|dl-wotblitz-gc.wargaming.net
 dns|ipv4only.arpa|A
 dns|ipv4only.arpa|AAAA
