@@ -9,5 +9,3 @@ $file = $baseurl . '/games/' . $argv[1] . '.txt';
 echo ("*** Test script: $file \r\n");
 $content = file_get_contents($file);
 echo ("*** Contents: $content \r\n");
-
-?>
