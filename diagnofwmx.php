@@ -32,7 +32,7 @@ foreach ($scenario as $line) {
             exec($cmd,$out);
             $results .= implode("\r\n",$out) . "\r\n";
         } else if ($test[0] == 'tracert') {
-            $cmd = "mtr ${test[1]}";
+            $cmd = "sudo mtr ${test[1]}";
             $v = "*** TRACERT test - running command $cmd...\r\n";
             echo($v); $results .= $v;
             exec($cmd,$out);
