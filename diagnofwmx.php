@@ -17,18 +17,18 @@ $results='';
 foreach ($scenario as $line) {
     if (!empty($line)) {
         $test = explode('|', $line);
-        if ($test[1] == 'dns') {
-            $cmd = "dig ${test[2]} ${test[3]}";
+        if ($test[0] == 'dns') {
+            $cmd = "dig ${test[1]} ${test[2]}";
             echo("*** DNS test - running command $cmd...\r\n");
             exec($cmd,$out);
             $results .= implode("\r\n",$out) . "\r\n";
-        } else if ($test[1] == 'ping') {
-            $cmd = "ping ${test[2]}";
+        } else if ($test[0] == 'ping') {
+            $cmd = "ping ${test[1]}";
             echo("*** PING test - running command $cmd...\r\n");
             exec($cmd,$out);
             $results .= implode("\r\n",$out) . "\r\n";
-        } else if ($test[1] == 'tracert') {
-            $cmd = "traceroute ${test[2]}";
+        } else if ($test[0] == 'tracert') {
+            $cmd = "traceroute ${test[1]}";
             echo("*** TRACERT test - running command $cmd...\r\n");
             exec($cmd,$out);
             $results .= implode("\r\n",$out) . "\r\n";

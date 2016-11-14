@@ -19,6 +19,7 @@ fi
 
 if [ "$ISTRACRTINST" -ne "1" ]; then
     echo "*** Installing Traceroute..."
+    sudo add-apt-repository universe
     sudo apt -y install $TRACRTPKG
 else
     echo "*** Traceroute is already installed"
