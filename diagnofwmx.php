@@ -37,6 +37,12 @@ foreach ($scenario as $line) {
             echo($v); $results .= $v;
             exec($cmd,$out);
             $results .= implode("\r\n",$out) . "\r\n";
+        } else if ($test[0] == 'curl') {
+            $cmd = "curl -sS ${test[1]}";
+            $v = "*** CURL test - running command $cmd...\r\n";
+            echo($v); $results .= $v;
+            exec($cmd,$out);
+            $results .= implode("\r\n",$out) . "\r\n";
         } else {
             echo("*** Unknown test: '$line'\r\n");
         }
