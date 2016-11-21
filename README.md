@@ -18,6 +18,7 @@ Whole output is saved into a log file, which can be later sent to ISP or game's 
 where ``<game>`` is one of the following:
 
   ``wotb`` - World of Tanks Blitz
+  ``eveonline`` - EVE Online
 
 Script will run the tests for the game you've specified and will create a report file. You can use Firefox on Ubuntu to send this report file to e-mail, FTP server or a website. You can also copy the report file to an USB stick.
 
