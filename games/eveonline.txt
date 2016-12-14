@@ -1,9 +1,13 @@
 dns|logs-01.loggly.com|A
 dns|launcher.eveonline.com|A
+dns|binaries.eveonline.com|A
+dns|resources.eveonline.com|A
 dns|cloudfront.net|A
 dns|s3-eu-west-1.amazonaws.com|A
 dns|creatives.extccp.com|A
 dns|ccpgames.cdn.adglare.net|A
 dns|hello.myfonts.net|A
 tracert|launcher.eveonline.com
+tracert|binaries.eveonline.com
+tracert|resources.eveonline.com
 tracert|87.237.34.200
